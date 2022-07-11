@@ -72,8 +72,8 @@ const ShowForm = () => {
         <div className='container'>
             {!submitted ?
                 correctForm ?
-                    <form>
-                        <table>
+                    <form style={{ width: '100%', maxWidth: '600px' }}>
+                        <table style={{ width: '100%' }}>
                             <tbody>
                                 {data && data.map((label, idx) =>
                                     <tr key={idx} className='form-container'>
