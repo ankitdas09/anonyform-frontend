@@ -26,24 +26,26 @@ const CreateForm = ({ handleFormCreated, setCreds }) => {
         setCreds(data)
     }
     return (
-        <div>
-            <div className='form-input-container'>
-                <h2 style={{ fontWeight: 'lighter' }}>Create New Form</h2>
-                <h3>Add New Field: </h3>
-                <input type="text" name="" id="" onChange={handleChange} value={label} />
-                <input type="button" value="Add" onClick={handleAdd} />
-            </div>
-            <div>
-                <h4>Form Properties: </h4>
-                {labels.map((label, idx) => <p key={uuidv4()}>{label}</p>)}
-            </div>
-            <div>
-                {labels.length ?
-                    <button className='btn' onClick={() => {
-                        handleCreate()
-                        handleFormCreated()
-                    }}>Create Form</button> : ''
-                }
+        <div className='mainContainer'>
+            <div className='createFormContainer'>
+                <div className='form-input-container'>
+                    <h2 style={{ fontWeight: 'lighter' }}>Create New Form</h2>
+                    <h3>Add New Field: </h3>
+                    <input type="text" name="" id="" onChange={handleChange} value={label} />
+                    <input type="button" value="Add" onClick={handleAdd} />
+                </div>
+                <div className='addedLabelsContainer'>
+                    <h4>Form Properties: </h4>
+                    {labels.map((label, idx) => <div key={uuidv4()} className='addedLabel'><p>{label}</p></div>)}
+                </div>
+                <div>
+                    {labels.length ?
+                        <button className='btn btn-createform' onClick={() => {
+                            handleCreate()
+                            handleFormCreated()
+                        }}>Create Form</button> : ''
+                    }
+                </div>
             </div>
         </div>
     )

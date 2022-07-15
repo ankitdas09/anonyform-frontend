@@ -1,3 +1,10 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-input-container h3 {
     margin-top: 0em;
     font-weight: lighter;
@@ -22,4 +29,26 @@
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;
+}
+
+.addedLabel {
+    border: 2px solid white;
+    min-width: 200px;
+    margin: 0.1em 0;
+}
+
+.createFormContainer {
+    border: 1px solid white;
+    padding: 3em;
+}
+
+.addedLabelsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-createform {
+    margin: 1em 0;
 }
