@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Response from "./response.component";
 
 import { getResponses } from "../api";
-import { Container } from "./styles/essentials.styled";
+import { Button, Container } from "./styles/essentials.styled";
 const ShowResponses = () => {
 	const { id, token } = useParams();
 	const [responses, setResponses] = useState(null);
@@ -46,7 +46,8 @@ const ShowResponses = () => {
 								))}
 						</tbody>
 					</table>
-					<button onClick={handleGetResponses}>Refresh</button>
+					<br />
+					<Button onClick={handleGetResponses}>Refresh</Button>
 				</>
 			) : (
 				"Loading Responses"
